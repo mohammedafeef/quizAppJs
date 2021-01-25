@@ -11,22 +11,29 @@
 <body>
     <main class="container">
         <section class="quizPart">
-            <div class="quizQuestion quiz">
-                <h1>question:</h1>
-                <span>Most wealthiest person in the world ?</span>
+            <div class="game">
+                <div class="quizQuestion quiz">
+                    <h1>question:</h1>
+                    <span>Most wealthiest person in the world ?</span>
+                </div>
+                <form action="#" class="quizAnswers quiz">
+                    <h1>answers:</h1>
+                    <input type="radio" name="answer" id="ans1" value="ans1">
+                    <label for="ans1">Bill gates</label><br>
+                    <input type="radio" name="answer" id="ans2" value="ans2">
+                    <label for="ans2">Elon musk</label><br>
+                    <input type="radio" name="answer" id="ans3" value="ans3">
+                    <label for="ans3">Jef besos</label><br>
+                    <input type="radio" name="answer" id="ans4" value="ans4">
+                    <label for="ans4">sundhar biche</label><br>
+                    <button type="submit" onclick="() => { answerSubmition()}">submit</button>
+                </form>
             </div>
-            <form action="#" class="quizAnswers quiz">
-                <h1>answers:</h1>
-                <input type="radio" name="answer" id="ans1" value="ans1">
-                <label for="ans1">Bill gates</label><br>
-                <input type="radio" name="answer" id="ans2" value="ans2">
-                <label for="ans2">Elon musk</label><br>
-                <input type="radio" name="answer" id="ans3" value="ans3">
-                <label for="ans3">Jef besos</label><br>
-                <input type="radio" name="answer" id="ans4" value="ans4">
-                <label for="ans4">sundhar biche</label><br>
-                <button type="submit">submit</button>
-            </form>
+            <div class="gameOver">
+                <h1>gameOver</h1>
+                <p>correct <span class="correct">2</span></p>
+                <p>wrong <span class="wrong">1</span></p>
+            </div>
         </section>
     </main>
     <span class="circle"></span>

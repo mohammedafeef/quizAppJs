@@ -16,6 +16,7 @@ body{
     width:100vw;
     height:100vh;
     position:relative;
+    overflow:hidden;
 }
 /* entire code is under this sectionk */
 .container{
@@ -79,13 +80,19 @@ body{
     backdrop-filter:blur(5px);
     box-shadow:10px 5px 10px 2px rgba(0,0,0,.2);
     z-index:3;
-    background-color:rgba(255,255,255,.1)
+    background-color:rgba(255,255,255,.1);
+    width:25rem;
+    height:20rem;
+    overflow:hidden;
 }
 /*common code for the questions and answer section */
 .quiz h1{
     font-family:var(--fnt-tlt);
     text-transform:capitalize;
     margin-bottom:.5rem;
+}
+.game{
+    display:block;
 }
 /* question part of the web */
 .quizQuestion{
@@ -112,4 +119,36 @@ body{
 .quizAnswers button:focus{
     border:none;
     outline:none;
+}
+/* gameOver section */
+.gameOver{
+    width:100%;
+    height:100%;
+    display:grid;
+    place-items:center;
+    transform: translateX(100%);
+    transition:transform .5s ease-in-out;
+}
+.gameOver h1{
+    font-size:2rem;
+    margin-bottom:1rem;
+    font-family:var(--fnt-tlt);
+}
+.gameOver p{
+    font-size:1.5rem;
+    font-family:var(--fnt-cnt);
+    text-align:left;
+}
+.gameOver p span{
+    margin-left:.3rem;
+    padding:.1rem .8rem;
+    background-color:rgba(5, 58, 231, .3);
+    box-shadow:0 0 5px 2px rgba(255,255,255,.2);
+    border-radius:4px;
+}
+.correct{
+    background-color:rgba(46, 230, 9,.3) !important ;
+}
+.wrong{
+    background-color:rgba(216, 10, 10,.3) !important ;
 }
