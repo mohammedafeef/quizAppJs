@@ -7,11 +7,12 @@ let quizgameOverSection = document.querySelector(".gameOver");
 let quizGameSection = document.querySelector(".game");
 let quizPoint = document.querySelector(".correct")
 let quizLossPoint = document.querySelector(".wrong");
+let quizRestratButton = document.querySelector(".restart");
 let out = console.log;
 //question for the quiz 
 const questions = [
     {
-        qus:"Most wealthiest person in the woorld ?",
+        qus:"Most wealthiest person in the world ?",
         ans1:"Bill gates",
         ans2:"Elon musk",
         ans3:"jef besos",
@@ -46,15 +47,14 @@ const nextQustion = () =>{
         answer.innerHTML = currentQus[`${answer.id}`];
     })
     currentQusIndex == questions.length - 1 ?quizSubmitionButton.innerHTML = "submit" : null ;
-    
-
-    
+        
 }
 //for ending the game
 const gameOver = () =>{
     quizPoint.innerHTML = points;
     quizLossPoint.innerHTML = questions.length - points ;
     quizGameSection.style.display = "none";
+    quizgameOverSection.style.display = "grid";
     quizgameOverSection.style.transform = "translateX(0%)";
     currentQusIndex = points = 0;
 
@@ -85,4 +85,15 @@ const answerSubmition = () =>{
         })
     }
 }
+//for setting game to restart again
+const restartGame = () =>{
+    //for setting the first question as the default
+    nextQustion();
+    currentQusIndex++;
+    quizgameOverSection.style.transform = "translateX(100%)";
+    quizgameOverSection.style.display = "none";
+    quizGameSection.style.display = "block";
+}
+//adding the event listener for the button
 quizSubmitionButton.addEventListener("click",()=>{answerSubmition()});
+quizRestratButton.addEventListener("click",()=>{restartGame()});
