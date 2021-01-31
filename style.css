@@ -176,3 +176,47 @@ body{
     border:none;
     outline:none;
 }
+/* media queries for the responsive front-end */
+@media (max-width:750px){
+    :root{
+        font-size:2.5vw;
+    }
+    .container::before{
+        left:13%;
+    }
+}
+@media (max-width:600px){
+    :root{
+        font-size:2.8vw;
+    }
+    .container::before{
+        top:25%;
+    }
+}
+@media (max-width:400px){
+    :root{
+        font-size:3.5vw;
+    }
+    .container::before{
+        left:1%;
+        top:23%;
+    }
+    .container::after{
+        left:71%;
+        top:65%;
+    }
+    .quizPart{
+        height:28rem;
+    }
+    .quiz h1{
+        margin-bottom:1.5rem;
+        letter-spacing:.2rem;
+        font-size:2rem;
+    }
+    .answer, .quizQuestion span{
+        font-size:1.5rem;
+    }
+    .button{
+        font-size:1.5rem !important;
+    }
+}
